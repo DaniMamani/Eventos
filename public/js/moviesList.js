@@ -8,10 +8,18 @@ window.onload = function(){
         body.classList.add('fondoMoviesList');
     }
     
-    console.log(body);
     moviesListTitulo.innerHTML = 'LISTADO DE PELÍCULAS';
     moviesListTitulo.style.color ='white';
     moviesListTitulo.style.backgroundColor = 'teal';
     moviesListTitulo.style.padding = '20px';
 
+    let logo = document.querySelector('img#logo');
+
+    logo.addEventListener('mouseover', () => {
+        body.style.backgroundColor = '#7f7f7f'
+    })
+
+    logo.addEventListener('mouseout', () => {
+        body.style.backgroundColor = 'white'
+    })
 }

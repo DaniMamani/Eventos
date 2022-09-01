@@ -15,12 +15,13 @@ window.onload = function(){
     }
         
     subtitulo.style.textTransform = 'uppercase';
+    enlace.style.color = '#E51B3E';
+
     let confirmar = confirm('Desea colocar un fondo de pantalla ')
     if(confirmar){
         fondo.classList.add('fondo');
-        enlace.style.color = '#E51B3E';
     }
-    console.log(destacado);
+
     for(let i = 0 ; i < destacado.length; i++){
         if(i % 2 == 0){
             destacado[i].classList.add('destacadoPar');
@@ -31,4 +32,15 @@ window.onload = function(){
     
 
     container.style.display = 'block';
+
+    let menu = document.querySelector('#menu');
+    let logo = document.querySelector('.logoDH');
+
+    logo.addEventListener('click', () => {
+        menu.classList.toggle('mostrar');
+    })
+    
+    menu.addEventListener('mouseout', () => {
+        menu.classList.remove('mostrar')
+    })
 }
